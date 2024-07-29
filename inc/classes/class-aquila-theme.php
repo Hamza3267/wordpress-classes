@@ -7,10 +7,17 @@ class AQUILA_THEME {
     use Singleton;
 
     protected function __construct() {
-        Assests::get_instance();
-        Menus::get_instance();
-        Meta_Boxes::get_instance();
-        Sidebars::get_instance();
+        Assets::get_instance();
+		Menus::get_instance();
+		Meta_Boxes::get_instance();
+		Sidebars::get_instance();
+		Blocks::get_instance();
+		Block_Patterns::get_instance();
+		Loadmore_Posts::get_instance();
+		Loadmore_Single::get_instance();
+		Register_Post_Types::get_instance();
+		Register_Taxonomies::get_instance();
+		Archive_Settings::get_instance();
 
         $this->set_hooks();
     }
@@ -26,6 +33,7 @@ class AQUILA_THEME {
     }
 
     public function hamzamalik_register_scripts() {
-        wp_enqueue_script('main-js-2', AQUILA_DIR_URI . '/assests/src/js/main.js', ['jquery'], '1.0', true);
+        //wp_enqueue_script('main-js-2', AQUILA_BUILD_JS_URI . '/main.js', ['jquery'], '1.0', true);
+        wp_enqueue_script( 'main-js-2', AQUILA_BUILD_JS_URI . '/main.js', ['jquery'], filemtime( AQUILA_BUILD_JS_DIR_PATH . '/main.js' ), true );
     }
 }

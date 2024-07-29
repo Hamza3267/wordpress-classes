@@ -50,9 +50,7 @@
                       <?php
                     } else {
                     ?>
-                     <span class="navbar-text">
-                          Navbar text with an inline element
-                      </span>
+                     
                      <?php
                     }
                     ?>
@@ -66,6 +64,7 @@
           <?php
         }
       ?>
+      <?php  get_search_form(); ?>
     </div>
   </div>
 </nav>

@@ -4,7 +4,9 @@
   "description": "Aquila theme packages",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prod": "cross-env NODE_ENV=production webpack --mode production --progress",
+    "dev": "cross-env NODE_ENV=development webpack --watch --mode development --progress",
+    "clean": "rm -rf build/*"
   },
   "keywords": [
     "wordpress",
@@ -27,9 +29,15 @@
     "cssnano": "^7.0.4",
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^2.9.0",
+    "node-sass": "^9.0.0",
+    "sass-loader": "^14.2.1",
     "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.10",
     "uglifyjs-webpack-plugin-new": "^1.0.0",
     "webpack": "^5.93.0",
     "webpack-cli": "^5.1.4"
+  },
+  "devDependencies": {
+    "css-minimizer-webpack-plugin": "^7.0.0"
   }
 }

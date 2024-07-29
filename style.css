@@ -30,3 +30,21 @@ img{
 .nav-item:hover .dropdown-menu:not(.show){
     display: block;
 }
+
+/* search btn */
+input.search-submit {
+    border: 2px solid grey;
+    border-radius: 10px;
+    background: black;
+    color: whitesmoke;
+}
+input.search-submit:hover {
+    color: whitesmoke;
+    background: gray;
+}
+/* search input */
+input.search-field {
+    border-radius: 10px;
+    padding-left: 10px;
+    outline-style: none;
+}
